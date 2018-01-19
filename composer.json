@@ -1,0 +1,41 @@
+{
+    "name": "jdpowered/laravel-fcm-channel",
+    "description": "Laravel Notification Channel for Google FCM (Firebase Cloud Massaging)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Döbertin",
+            "email": "hello@jd-powered.net"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/contracts": "^5.5",
+        "illuminate/notifications": "^5.5",
+        "illuminate/support": "^5.5",
+        "zendframework/zendservice-google-gcm": "~2.0.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JdPowered\\FcmNotificationChannel\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JdPowered\\FcmNotificationChannel\\FcmNotificationChannelServiceProvider"
+            ]
+        }
+    }
+}
